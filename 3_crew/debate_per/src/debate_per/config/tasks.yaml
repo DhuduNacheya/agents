@@ -1,0 +1,21 @@
+debate_task:
+  description: >
+    Conduct a thorough debate in favor {topic}
+  expected_output: >
+    A list with 10 bullet points of the most relevant information in favor of {topic}
+  agent: debater
+
+counter_debater_task:
+  description: >
+    Conduct a thorough debate against {topic}
+  expected_output: >
+    A list with 10 bullet points of the most relevant information in against {topic}
+  agent: debater
+
+decide:
+  description: >
+    Review the arguments presented by the debater and counter and decide which side is more convincing.
+  expected_output: >
+    Your decision on which side is more convincing, and why.
+  agent: judge
+  output_file: output/decide.md
